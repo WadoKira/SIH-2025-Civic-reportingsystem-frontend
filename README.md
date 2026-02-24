@@ -1,134 +1,110 @@
-Civic Reporter — Frontend (Flutter)
+# Civic Reporter Frontend
 
-A mobile frontend application built with Flutter for the Civic Reporting System — developed as part of Smart India Hackathon 2025 (SIH 2025).
+Demonstrates the frontend implementation of the Civic Reporting System developed for Smart India Hackathon 2025.
 
-This application enables citizens to report civic issues, view nearby problems, and interact with backend services including authentication, issue tracking, maps, and image uploads.
+## Overview
 
-Features
+This project is a Flutter-based mobile application that enables citizens to report civic issues, track complaint status, and view nearby problems using map integration.
 
-Cross-platform Flutter application (Android, iOS, Web, Desktop)
+The application focuses on usability, modular architecture, and scalable state management.
 
-User authentication and session handling
+## Features
 
-Issue reporting with camera and gallery support
+- Cross-platform Flutter application (Android, iOS, Web)
+- Secure authentication system
+- Issue reporting with camera and gallery support
+- Real-time location tagging
+- Interactive map view of complaints
+- Provider-based state management
+- Light and dark theme support
 
-Maps and real-time location integration
+## Tech Stack
 
-State management using Provider
+- Flutter
+- Dart
+- Provider (State Management)
+- flutter_map (Maps Integration)
+- geolocator & geocoding (Location Services)
+- camera & image_picker (Media Capture)
+- google_nav_bar (Navigation UI)
 
-Material Design UI with light and dark theme support
+## Project Structure
 
-Project Structure
-├── android/             # Android native configuration
-├── ios/                 # iOS native configuration
-├── lib/                 # Main Dart source code
-│   ├── providers/       # State management classes
-│   ├── screens/         # Application UI screens
-│   ├── utils/           # Themes and utility classes
-│   └── main.dart        # Application entry point
-├── web/                 # Web configuration
-├── test/                # Unit and widget tests
-├── pubspec.yaml         # Project dependencies
-├── .gitignore           # Git ignore rules
-└── README.md            # Documentation
-Dependencies
+- android/ – Android native configuration
+- ios/ – iOS native configuration
+- web/ – Web configuration
+- lib/
+  - providers/ – State management logic
+  - screens/ – Application UI screens
+  - utils/ – Themes and helper utilities
+  - main.dart – Application entry point
+- test/ – Unit and widget tests
+- pubspec.yaml – Dependencies and project metadata
 
-Key packages used in this project:
+## Getting Started
 
-flutter_map — Interactive map rendering
+This project is a starting point for a Flutter application.
 
-latlong2 — Geographic coordinate handling
+### Clone the Repository
 
-geolocator — Device location access
+git clone https://github.com/WadoKira/SIH-2025-Civic-reportingsystem-frontend.git  
+cd SIH-2025-Civic-reportingsystem-frontend  
 
-geocoding — Reverse geolocation
+### Install Dependencies
 
-image_picker — Image selection from camera/gallery
-
-camera — Camera integration
-
-google_nav_bar — Bottom navigation bar
-
-provider — State management
-
-intl — Internationalization support
-
-All dependencies are listed in pubspec.yaml.
-
-Architecture
-State Management
-
-The project uses Provider for scalable and reactive state management.
-
-MultiProvider(
-  providers: [
-    ChangeNotifierProvider(create: (_) => AuthProvider()),
-    ChangeNotifierProvider(create: (_) => IssueProvider()),
-  ],
-  child: MaterialApp(...)
-)
-Theme Support
-
-Custom light and dark themes are defined in utils/app_theme.dart.
-
-Modular Screen Design
-
-Screens are organized into separate files for authentication, dashboard, issue reporting, and splash flow.
-
-Map and Location Integration
-
-The application integrates device geolocation and interactive maps to allow accurate civic issue reporting.
-
-Setup and Installation
-Clone the Repository
-git clone https://github.com/WadoKira/SIH-2025-Civic-reportingsystem-frontend.git
-cd SIH-2025-Civic-reportingsystem-frontend
-Install Dependencies
 flutter pub get
-Run the Application
 
-For Android or iOS:
+### Run the Application
 
 flutter run
 
-For Web:
+### Run on Web
 
 flutter run -d chrome
-Build Release Version
 
-For Android:
+## Build
+
+### Build Android APK
 
 flutter build apk
 
-For iOS:
+### Build iOS
 
 flutter build ios
-Recommended Environment
 
-Flutter 3.9 or higher
+### Build Web
 
-Compatible Dart SDK
+flutter build web
 
-Android Studio or Visual Studio Code
+## Architecture
 
-Contribution Guidelines
+The application follows a modular structure:
 
-Fork the repository
+- UI separated into screens
+- Business logic handled via Provider
+- Theme configuration centralized
+- Location and map services integrated into reporting flow
 
-Create a new branch
+## Recommended Environment
 
-Commit changes with proper descriptions
+- Flutter 3.x
+- Dart SDK compatible with Flutter
+- Android Studio or VS Code
+- Android SDK / Xcode
 
-Submit a pull request
+## Contribution
 
-Ensure code formatting and lint rules are followed.
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Submit a Pull Request
 
-Future Enhancements
+Ensure proper formatting and lint rules are followed.
 
-Offline-first synchronization
+## Future Improvements
 
-Push notifications for issue status updates
-
-Map clustering and heatmap visualization
-
-Complete backend API integration documentation
+- Offline-first support
+- Push notifications
+- Complaint analytics dashboard
+- Map clustering and heatmap visualization
+- Enhanced backend integration
